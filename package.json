@@ -1,0 +1,19 @@
+{
+  "name": "nodepad",
+  "version": "1.0.0",
+  "description": "A simple notepad for node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.0.3",
+    "body-parser": "^1.16.1",
+    "btoa": "^1.1.2",
+    "express": "^4.14.1",
+    "express-rate-limit": "^2.6.0",
+    "node-cache": "^4.1.1"
+  }
+}
