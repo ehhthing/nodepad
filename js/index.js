@@ -7,10 +7,10 @@ $.get(domain + "/", function(res) {
     }, 700)
     $("form").fadeIn(700)
   } else {
-    window.location.href = "https://projectthing.tk/maintenance"
+    window.location.href = "/maintenance"
   }
 }).fail(function() {
-  window.location.href = "https://projectthing.tk/maintenance"
+  window.location.href = "/maintenance"
 });
 
 function getUTF8Length(s) {
@@ -71,7 +71,7 @@ function createNote() {
       var res = data.responseJSON
       if (status == "success") {
         if (res.error == "none") {
-          window.location.href="http://s.codepen.io/ehhthing/debug/zNyvyW/gareYpqQWjYr#" +name
+          window.location.href="/note/#" +name
         } else {
           swal("Error!", res.error, "error")
         }
