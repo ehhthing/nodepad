@@ -40,10 +40,16 @@ var port = process.env.PORT || 8080;
 var online = true
 var alphanumaric = /^[a-z0-9]+$/i
 router.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*")
+	res.header('Access-Control-Allow-Methods', 'GET,POST');
+	res.header('Access-Control-Allow-Headers', 'Content-Type')
+	res.header("Cache-Control", "no-cache, no-store, must-revalidate");
+	res.header("Pragma", "no-cache");
+	res.header("Expires", 0);
 	console.log("----------------------------------")
 	console.log(req.headers);
 	console.log("----------------------------------")
-	if (online = true) {
+	if (online == true) {
 		next();
 	} else {
 		res.json({
@@ -80,7 +86,8 @@ function proccessBase64(res, string, callback) {
 }
 router.get('/', function(req, res) {
 	res.json({
-		status: 'online'
+		status: 'online',
+		error: 'none'
 	});
 });
 router.post('/create', function(req, res) {
@@ -115,7 +122,7 @@ router.post('/create', function(req, res) {
 						})
 					} else {
 						res.json({
-							error: "The that you entered already exists!"
+							error: "The note name that you entered already exists!"
 						})
 					}
 				} else {
@@ -147,7 +154,8 @@ router.get('/get/*', function(req, res) {
 				} else {
 					res.json({
 						note: value.note,
-						type: value.type
+						type: value.type,
+						error: "none"
 					})
 					name = null
 				}
@@ -166,6 +174,6 @@ router.get('/get/*', function(req, res) {
 
 })
 app.use('/', router);
-app.listen(port);
+app.listen(53);
 app.use('/create', limit);
-console.log('Server started on port ' + port);
+console.log('Server started on port ' + 53);
