@@ -1,0 +1,127 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+#title {
+  font-weight: 300;
+  font-size: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  color: #ffffff;
+  line-height: 0em;
+  margin-right: 3vw;
+}
+
+html {
+  min-height: 100%;
+}
+
+#main {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  width: 94vw;
+  margin-top: 5vh;
+  margin-bottom 5vh;
+  height: 85vh;
+  font-size: 0;
+}
+
+input {
+  color: white;
+  text-indent: 0.7vw;
+  border: none;
+  font-size: 5vh;
+  width: calc(100%);
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.0980392);
+}
+
+textarea {
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+  color: white;
+  outline: none;
+  resize: none;
+  border: none;
+  font-weight: 400;
+  font-size: 3vh;
+  height: calc(100% - 3vh - 1px - 5vh);
+  width: calc(100% - 0.7vw - 0.7vw);
+  background-color: rgba(255, 255, 255, 0.0980392);
+  margin-bottom: 0;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  display: block;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  font-size: 6vh;
+  color: white;
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.0980392);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0)
+  }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+#what {
+  font-size: 3vh;
+  margin-top: 1vh;
+  color: rgb(102, 187, 255);
+  text-align: center;
+  cursor: default;
+}

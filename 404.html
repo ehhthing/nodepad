@@ -1,0 +1,9 @@
+<script>
+var name = location.hash
+if (name == "") {
+window.location.href="/"
+} else {
+name = name.replace("#", "")
+window.location.href="/note/#" + name
+}
+</script>
