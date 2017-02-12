@@ -11,7 +11,7 @@ $.get(domain + "/", function(res) {
         if (res.error == "none") {
            $("form").fadeIn(700)
             $("#name").val(note)
-          $("#content").html(atob(res.note))
+          $("#content").html(filterXSS(decodeURIComponent(atob(res.note))))
         } else {
           swal("Oops", res.error, "error").then(function() {
             window.location.href = "/"
