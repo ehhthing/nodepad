@@ -6,6 +6,10 @@ var crypto = require('crypto');
 var RateLimit = require('express-rate-limit');
 var atob = require('atob');
 var btoa = require('btoa');
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+var options = {key: fs.readFileSync('server.key'), cert: fs.readFileSync('server.crt')} // Your TLS certs!
 var notes = new NodeCache({
 	stdTTL: 900,
 	checkperiod: 120
@@ -174,6 +178,7 @@ router.get('/get/*', function(req, res) {
 
 })
 app.use('/', router);
-app.listen(53);
+https.createServer(options, app).listen(2053)
+http.createServer(app).listen(2054)
 app.use('/create', limit);
-console.log('Server started on port ' + 53);
+console.log('Server started on port ' + 2053);
