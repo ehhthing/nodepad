@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://jqry.tk">
+  </script>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
+    * {
+      font-family: Roboto, sans-serif;
+    }
+    
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+    
+    div {
+      display: none;
+      min-height: 100%;
+      background-color: #6A1B9A;
+    }
+    
+    h1 {
+      font-weight: 300;
+    }
+    
+    #maintenance {
+      margin-top: 10%;
+      margin-left: 4%;
+      margin-right: 4%;
+      line-height: 30%;
+      padding-bottom: 0px;
+      font-size: 64px;
+      color: #972ada;
+    }
+    
+    #desc {
+      color: #fff;
+      line-height: 100%;
+      margin-left: 4%;
+      margin-right: 4%;
+      font-weight: 400;
+      font-size: 29px;
+    }
+    
+    #ending {
+      line-height: 100%;
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #d09fee;
+    }
+  </style>
+  <title>Maintenance</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <h1 id="maintenance">Maintenance</h1>
+    <h2 id="desc">We're undergoing a unscheduled maintenance.</h2>
+    <p id="ending">We do not know when the maintenance will end.</p>
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  </div>
+  <script>
+    $(document).ready(function() {
+        $("div").fadeIn(1000);
+    });
+  </script>
+</body>
+
+</html>
