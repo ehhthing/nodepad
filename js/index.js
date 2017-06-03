@@ -1,4 +1,4 @@
-var domain = "https://server.larry.cf:2053"
+var domain = "https://nodepad.larry.cf"
 $.get(domain + "/", function(res) {
   if (res.error == "none" && res.status == "online") {
     $(".spinner").remove()
